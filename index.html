@@ -1,203 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Real Massage | Wellness & Relaxation</title>
+    <meta charset="UTF-8">
 
-<meta name="description"
-content="The Real Massage — a peaceful wellness space offering relaxing massage experiences.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="color-scheme" content="light">
+
+    <meta
+        name="description"
+        content="The Real Massage - Relaxation, wellness and professional massage services."
+    >
+
+    <title>The Real Massage | Relaxation & Wellness</title>
+
 
 <style>
 
 /* =========================================================
    THE REAL MASSAGE
-   LIGHT • PREMIUM • PEACEFUL
+   RESPONSIVE PROFESSIONAL WEBSITE
+   LIGHT MODE
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
 ========================================================= */
 
 :root {
+
     --cream: #faf8f2;
+
     --white: #ffffff;
+
     --sage: #718477;
+
     --sage-dark: #4e6256;
+
     --sage-light: #e7eee8;
+
     --gold: #b49a6a;
+
+    --gold-light: #d9c8a5;
+
     --text: #39463f;
+
     --muted: #788079;
+
     --border: #e5e3da;
-    --shadow: 0 20px 60px rgba(61, 76, 66, 0.10);
+
+    --shadow:
+        0 20px 60px rgba(61, 76, 66, 0.10);
+
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.7;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
 
 /* =========================================================
-   NAVBAR
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    color-scheme: light !important;
+
+    background: var(--cream);
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--cream) !important;
+
+    color: var(--text) !important;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #f0eee7;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--sage);
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
 ========================================================= */
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
 
-    background: rgba(250, 248, 242, 0.88);
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    background:
+        rgba(250, 248, 242, 0.94);
+
     backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(229, 227, 218, 0.8);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(229, 227, 218, 0.8);
+
 }
 
+
 .nav-container {
+
+    width: 100%;
+
     max-width: 1200px;
-    margin: auto;
 
     height: 78px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: auto;
 
     padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
 }
+
 
 .logo {
+
     font-family: Georgia, serif;
+
     font-size: 25px;
+
     color: var(--sage-dark);
-    letter-spacing: 0.5px;
+
+    letter-spacing: .5px;
+
+    white-space: nowrap;
+
 }
+
 
 .logo span {
+
     color: var(--gold);
+
 }
+
 
 .nav-links {
+
     display: flex;
+
+    align-items: center;
+
     gap: 32px;
+
     list-style: none;
+
 }
+
 
 .nav-links a {
+
     color: var(--text);
+
     font-size: 14px;
-    transition: 0.3s;
+
+    transition: .3s;
+
 }
+
 
 .nav-links a:hover {
+
     color: var(--gold);
+
 }
 
+
 .nav-btn {
+
     background: var(--sage);
+
     color: white;
 
     padding: 11px 21px;
+
     border-radius: 30px;
 
     font-size: 14px;
+
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: .3s;
+
 }
 
+
 .nav-btn:hover {
+
     background: var(--sage-dark);
+
     transform: translateY(-2px);
+
 }
+
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--sage-dark);
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+}
+
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero {
+
     min-height: 100vh;
 
+    padding:
+        125px 25px
+        80px;
+
     display: flex;
+
     align-items: center;
 
-    padding: 120px 25px 80px;
-
     background:
+
         radial-gradient(
             circle at 85% 15%,
-            rgba(208, 221, 211, 0.7),
+            rgba(208, 221, 211, .7),
             transparent 28%
         ),
+
         linear-gradient(
             135deg,
             #faf8f2,
             #edf2ed
         );
+
 }
 
+
 .hero-container {
+
     width: 100%;
+
     max-width: 1200px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+
+    grid-template-columns:
+        1.05fr .95fr;
 
     gap: 70px;
+
     align-items: center;
+
 }
 
+
 .hero-small {
+
     color: var(--gold);
 
     text-transform: uppercase;
+
     letter-spacing: 4px;
 
     font-size: 12px;
+
     font-weight: 700;
+
 }
 
+
 .hero h1 {
+
     font-family: Georgia, serif;
 
-    font-size: clamp(55px, 7vw, 90px);
+    font-size:
+        clamp(55px, 7vw, 90px);
 
-    line-height: 0.98;
+    line-height: .98;
 
     font-weight: 400;
 
     color: var(--sage-dark);
 
     margin: 18px 0 25px;
+
 }
+
 
 .hero h1 em {
+
     color: var(--gold);
-    font-weight: 400;
+
+    font-style: italic;
+
 }
 
+
 .hero-description {
+
     max-width: 560px;
 
     color: var(--muted);
@@ -205,178 +403,285 @@ img {
     font-size: 17px;
 
     margin-bottom: 32px;
+
 }
 
+
 .hero-buttons {
+
     display: flex;
+
     gap: 15px;
+
     flex-wrap: wrap;
+
 }
+
 
 .primary-btn,
 .secondary-btn {
+
     padding: 15px 27px;
+
     border-radius: 30px;
 
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: .3s;
+
 }
+
 
 .primary-btn {
+
     background: var(--sage);
+
     color: white;
+
 }
+
 
 .primary-btn:hover {
+
     background: var(--sage-dark);
+
     transform: translateY(-3px);
+
     box-shadow: var(--shadow);
+
 }
+
 
 .secondary-btn {
+
     border: 1px solid #c9c8bf;
+
     color: var(--sage-dark);
-    background: rgba(255,255,255,0.5);
+
+    background:
+        rgba(255,255,255,.5);
+
 }
+
 
 .secondary-btn:hover {
+
     background: white;
+
 }
 
-/* HERO IMAGE */
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
 
 .hero-image {
+
     position: relative;
+
 }
 
+
 .hero-image img {
+
     width: 100%;
+
     height: 580px;
 
     object-fit: cover;
 
-    border-radius: 180px 180px 30px 30px;
+    border-radius:
+        180px 180px
+        30px 30px;
 
     box-shadow: var(--shadow);
+
+    transition: .5s;
+
 }
 
+
+.hero-image:hover img {
+
+    transform: scale(1.015);
+
+}
+
+
 .floating-card {
+
     position: absolute;
 
     left: -30px;
+
     bottom: 35px;
 
-    background: rgba(255,255,255,0.92);
+    background:
+        rgba(255,255,255,.95);
 
     padding: 18px 23px;
 
     border-radius: 15px;
 
-    box-shadow: 0 15px 40px rgba(40,50,43,0.12);
+    box-shadow:
+        0 15px 40px
+        rgba(40,50,43,.12);
+
 }
+
 
 .floating-card strong {
+
     display: block;
+
     color: var(--sage-dark);
+
 }
 
+
 .floating-card span {
+
     color: var(--muted);
+
     font-size: 13px;
+
 }
+
 
 /* =========================================================
    GENERAL SECTIONS
 ========================================================= */
 
 section {
+
     padding: 110px 25px;
+
 }
+
 
 .container {
+
     max-width: 1100px;
+
     margin: auto;
+
 }
+
 
 .section-heading {
+
     text-align: center;
+
     margin-bottom: 60px;
+
 }
 
+
 .section-heading small {
+
     color: var(--gold);
 
     text-transform: uppercase;
+
     letter-spacing: 3px;
 
     font-size: 12px;
+
     font-weight: 700;
+
 }
 
+
 .section-heading h2 {
+
     font-family: Georgia, serif;
 
-    font-size: clamp(38px, 5vw, 55px);
+    font-size:
+        clamp(38px, 5vw, 55px);
 
     font-weight: 400;
 
     color: var(--sage-dark);
 
     margin: 10px 0;
+
 }
 
+
 .section-heading p {
+
     max-width: 620px;
+
     margin: auto;
 
     color: var(--muted);
+
 }
+
 
 /* =========================================================
    SERVICES
 ========================================================= */
 
 .services {
+
     background: var(--white);
+
 }
+
 
 .service-grid {
+
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 22px;
+
 }
 
+
 .service-card {
+
     padding: 35px 28px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     background: #fcfbf7;
 
     border-radius: 22px;
 
-    transition: 0.35s;
+    transition: .35s;
+
 }
 
+
 .service-card:hover {
+
     transform: translateY(-8px);
 
     box-shadow: var(--shadow);
 
-    border-color: #d5ddd6;
+    border-color:
+        #d5ddd6;
+
 }
 
+
 .service-icon {
+
     width: 60px;
+
     height: 60px;
 
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: var(--sage-light);
@@ -384,9 +689,12 @@ section {
     font-size: 26px;
 
     margin-bottom: 22px;
+
 }
 
+
 .service-card h3 {
+
     font-family: Georgia, serif;
 
     font-size: 23px;
@@ -396,53 +704,72 @@ section {
     color: var(--sage-dark);
 
     margin-bottom: 10px;
+
 }
 
+
 .service-card p {
+
     color: var(--muted);
 
     font-size: 14px;
+
 }
+
 
 /* =========================================================
-   INTRODUCTION
+   ABOUT
 ========================================================= */
 
-.introduction {
+.about {
+
     background: var(--sage-light);
+
 }
 
-.intro-grid {
+
+.about-grid {
+
     display: grid;
 
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns:
+        .9fr 1.1fr;
 
     gap: 70px;
 
     align-items: center;
+
 }
 
-.intro-image img {
-    height: 480px;
+
+.about-image img {
 
     width: 100%;
+
+    height: 480px;
 
     object-fit: cover;
 
     border-radius: 30px;
 
     box-shadow: var(--shadow);
+
 }
 
-.intro-text small {
+
+.about-text small {
+
     color: var(--gold);
 
     text-transform: uppercase;
 
     letter-spacing: 3px;
+
 }
 
-.intro-text h2 {
+
+.about-text h2 {
+
     font-family: Georgia, serif;
 
     font-size: 48px;
@@ -452,79 +779,111 @@ section {
     color: var(--sage-dark);
 
     margin: 12px 0 20px;
+
 }
 
-.intro-text p {
+
+.about-text p {
+
     color: var(--muted);
 
     margin-bottom: 18px;
+
 }
 
+
 .quote {
+
     margin-top: 25px;
 
     padding-left: 20px;
 
-    border-left: 3px solid var(--gold);
+    border-left:
+        3px solid var(--gold);
 
     color: var(--sage-dark);
 
     font-family: Georgia, serif;
 
     font-style: italic;
+
 }
 
+
 /* =========================================================
-   FEATURE STRIP
+   WHY US
 ========================================================= */
 
 .features {
+
     background: var(--cream);
+
 }
+
 
 .feature-grid {
+
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 25px;
+
 }
 
+
 .feature {
+
     text-align: center;
 
     padding: 35px 20px;
+
 }
 
+
 .feature-number {
+
     font-family: Georgia, serif;
 
     font-size: 45px;
 
     color: var(--gold);
+
 }
 
+
 .feature h3 {
+
     color: var(--sage-dark);
 
     margin: 5px 0;
+
 }
 
+
 .feature p {
+
     color: var(--muted);
 
     font-size: 14px;
+
 }
+
 
 /* =========================================================
    HOURS
 ========================================================= */
 
 .hours {
+
     background: var(--white);
+
 }
 
+
 .hours-box {
+
     max-width: 750px;
 
     margin: auto;
@@ -533,60 +892,85 @@ section {
 
     background: #faf9f5;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 25px;
 
     box-shadow: var(--shadow);
+
 }
 
+
 .hours-row {
+
     display: flex;
 
     justify-content: space-between;
 
     padding: 17px 0;
 
-    border-bottom: 1px solid var(--border);
+    border-bottom:
+        1px solid var(--border);
+
 }
+
 
 .hours-row:last-child {
+
     border-bottom: none;
+
 }
+
 
 .open {
+
     color: var(--sage);
+
     font-weight: 600;
+
 }
 
+
 .closed {
+
     color: #a47f7f;
+
 }
+
 
 /* =========================================================
    CONTACT
 ========================================================= */
 
 .contact {
+
     background:
         linear-gradient(
             135deg,
             #eef3ed,
             #faf8f2
         );
+
 }
 
+
 .contact-grid {
+
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 60px;
 
     align-items: start;
+
 }
 
+
 .contact-info h2 {
+
     font-family: Georgia, serif;
 
     font-size: 50px;
@@ -596,29 +980,44 @@ section {
     color: var(--sage-dark);
 
     margin-bottom: 18px;
+
 }
 
+
 .contact-info p {
+
     color: var(--muted);
 
     margin-bottom: 30px;
+
 }
+
 
 .contact-item {
+
     margin-bottom: 20px;
+
 }
 
+
 .contact-item strong {
+
     display: block;
 
     color: var(--sage-dark);
+
 }
+
 
 .contact-item span {
+
     color: var(--muted);
+
 }
 
+
 .contact-form {
+
     background: white;
 
     padding: 35px;
@@ -626,19 +1025,26 @@ section {
     border-radius: 25px;
 
     box-shadow: var(--shadow);
+
 }
 
+
 .form-group {
+
     margin-bottom: 15px;
+
 }
+
 
 .form-group input,
 .form-group textarea {
+
     width: 100%;
 
     padding: 15px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 12px;
 
@@ -648,21 +1054,30 @@ section {
 
     outline: none;
 
-    transition: 0.2s;
+    transition: .2s;
+
 }
 
+
 .form-group textarea {
+
     height: 130px;
 
     resize: vertical;
+
 }
+
 
 .form-group input:focus,
 .form-group textarea:focus {
+
     border-color: var(--sage);
+
 }
 
+
 .submit-btn {
+
     width: 100%;
 
     border: none;
@@ -679,46 +1094,66 @@ section {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: .3s;
+
 }
 
+
 .submit-btn:hover {
+
     background: var(--sage-dark);
+
 }
+
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
 footer {
+
     background: var(--sage-dark);
 
     color: white;
 
     text-align: center;
 
-    padding: 55px 25px 25px;
+    padding:
+        55px 25px
+        25px;
+
 }
 
+
 .footer-logo {
+
     font-family: Georgia, serif;
 
     font-size: 32px;
 
     margin-bottom: 10px;
+
 }
+
 
 .footer-logo span {
+
     color: #d1bd91;
+
 }
 
+
 footer p {
+
     color: #d1d9d2;
 
     font-size: 14px;
+
 }
 
+
 .footer-links {
+
     margin: 25px 0;
 
     display: flex;
@@ -726,20 +1161,32 @@ footer p {
     justify-content: center;
 
     gap: 25px;
+
+    flex-wrap: wrap;
+
 }
 
+
 .footer-links a {
+
     color: #d1d9d2;
 
     font-size: 14px;
+
 }
+
 
 .footer-links a:hover {
+
     color: white;
+
 }
 
+
 .copyright {
-    border-top: 1px solid rgba(255,255,255,0.15);
+
+    border-top:
+        1px solid rgba(255,255,255,.15);
 
     padding-top: 20px;
 
@@ -748,120 +1195,439 @@ footer p {
     color: #b9c5bb;
 
     font-size: 12px;
+
 }
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-.menu-button {
-    display: none;
-
-    border: none;
-
-    background: transparent;
-
-    font-size: 28px;
-
-    color: var(--sage-dark);
-
-    cursor: pointer;
-}
 
 /* =========================================================
-   RESPONSIVE
+   LAPTOP / DESKTOP
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (min-width: 901px) {
 
     .nav-links {
-        display: none;
+
+        display: flex;
+
     }
 
     .menu-button {
+
+        display: none;
+
+    }
+
+    .hero-container {
+
+        grid-template-columns:
+            1.05fr .95fr;
+
+    }
+
+    .service-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media
+(min-width: 601px)
+and
+(max-width: 900px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .menu-button {
+
         display: block;
+
     }
 
-    .hero-container,
-    .intro-grid,
-    .contact-grid {
+    .hero-container {
+
         grid-template-columns: 1fr;
-    }
 
-    .hero {
         text-align: center;
+
     }
 
     .hero-description {
+
         margin-left: auto;
+
         margin-right: auto;
+
     }
 
     .hero-buttons {
+
         justify-content: center;
+
     }
 
     .hero-image {
-        max-width: 600px;
+
+        max-width: 650px;
+
         width: 100%;
+
         margin: auto;
+
     }
 
     .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
-    .feature-grid {
+    .about-grid {
+
         grid-template-columns: 1fr;
+
     }
 
-    .intro-text {
+    .about-text {
+
         text-align: center;
+
     }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
 }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
 
+    .nav-container {
+
+        height: 70px;
+
+        padding:
+            0 18px;
+
+    }
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
     .nav-btn {
+
         display: none;
+
+    }
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+    .hero {
+
+        padding:
+            110px 18px
+            60px;
+
+        text-align: center;
+
+    }
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
     }
 
     .hero h1 {
-        font-size: 58px;
+
+        font-size: 56px;
+
+    }
+
+    .hero-description {
+
+        font-size: 15px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+
     }
 
     .hero-image img {
+
         height: 430px;
 
-        border-radius: 120px 120px 25px 25px;
+        border-radius:
+            120px 120px
+            25px 25px;
+
     }
 
     .floating-card {
+
         left: 10px;
+
         bottom: 20px;
+
+    }
+
+    section {
+
+        padding:
+            75px 18px;
+
     }
 
     .service-grid {
+
         grid-template-columns: 1fr;
+
     }
 
-    .hours-box {
-        padding: 25px;
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .about-image img {
+
+        height: 380px;
+
+    }
+
+    .about-text {
+
+        text-align: center;
+
+    }
+
+    .about-text h2 {
+
+        font-size: 40px;
+
+    }
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
     }
 
     .contact-info h2 {
+
         font-size: 40px;
+
     }
 
-    .intro-text h2 {
-        font-size: 40px;
+    .hours-box {
+
+        padding: 25px;
+
     }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+    .hero-image img {
+
+        height: 360px;
+
+    }
+
+    .section-heading h2 {
+
+        font-size: 35px;
+
+    }
+
+    .primary-btn,
+    .secondary-btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   FORCE LIGHT MODE
+========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    html {
+
+        color-scheme: light !important;
+
+        background: #faf8f2 !important;
+
+    }
+
+    body {
+
+        background: #faf8f2 !important;
+
+        color: #39463f !important;
+
+    }
+
+    .navbar {
+
+        background:
+            rgba(250,248,242,.96) !important;
+
+    }
+
+    .services,
+    .hours {
+
+        background: #ffffff !important;
+
+    }
+
+    .service-card {
+
+        background: #fcfbf7 !important;
+
+        color: #39463f !important;
+
+    }
+
+    .contact-form {
+
+        background: #ffffff !important;
+
+    }
+
+    input,
+    textarea {
+
+        background: #fcfbf8 !important;
+
+        color: #39463f !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.hero-text,
+.hero-image {
+
+    animation:
+        fadeUp .9s ease both;
+
+}
+
+
+.service-card {
+
+    animation:
+        fadeUp .8s ease both;
+
 }
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =======================================================
      NAVIGATION
@@ -871,83 +1637,160 @@ footer p {
 
     <div class="nav-container">
 
+
         <a href="#home" class="logo">
-            The Real <span>Massage</span>
+
+            The Real
+            <span>Massage</span>
+
         </a>
+
 
         <nav>
+
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#hours">Hours</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#hours">
+                        Hours
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
 
-        <a href="#contact" class="nav-btn">
-            Book a Visit
+
+        <a
+            href="#contact"
+            class="nav-btn"
+        >
+            Book Now
         </a>
 
-        <button class="menu-button" onclick="toggleMenu()">
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open menu"
+        >
             ☰
         </button>
+
 
     </div>
 
 </header>
 
 
+
 <!-- =======================================================
      HERO
 ======================================================= -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home"
+>
+
 
     <div class="hero-container">
 
-        <div>
+
+        <div class="hero-text">
+
 
             <div class="hero-small">
+
                 Wellness • Relaxation • Balance
+
             </div>
 
+
             <h1>
+
                 Feel<br>
-                <em>Truly</em> Relaxed.
+
+                <em>Truly</em>
+                Relaxed.
+
             </h1>
 
+
             <p class="hero-description">
-                Welcome to <strong>The Real Massage</strong> —
+
+                Welcome to
+                <strong>The Real Massage</strong> —
                 a peaceful space created for relaxation,
                 comfort and everyday wellbeing.
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#services" class="primary-btn">
+
+                <a
+                    href="#services"
+                    class="primary-btn"
+                >
                     Explore Services
                 </a>
 
-                <a href="#contact" class="secondary-btn">
+
+                <a
+                    href="#contact"
+                    class="secondary-btn"
+                >
                     Contact Us
                 </a>
 
+
             </div>
+
 
         </div>
 
 
+
         <div class="hero-image">
 
+
             <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85"
+                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85"
                 alt="Peaceful wellness room"
             >
 
+
             <div class="floating-card">
 
-                <strong>A Moment for You</strong>
+                <strong>
+                    A Moment for You
+                </strong>
 
                 <span>
                     Calm surroundings • Professional care
@@ -955,37 +1798,52 @@ footer p {
 
             </div>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
+
 <!-- =======================================================
      SERVICES
 ======================================================= -->
 
-<section class="services" id="services">
+<section
+    class="services"
+    id="services"
+>
+
 
     <div class="container">
 
+
         <div class="section-heading">
 
-            <small>Our Services</small>
+            <small>
+                Our Services
+            </small>
 
-            <h2>Simple. Calm. Restorative.</h2>
+            <h2>
+                Relax. Restore. Renew.
+            </h2>
 
             <p>
-                Choose from our range of relaxing wellness
-                experiences designed around comfort and calm.
+                Discover our range of massage and
+                relaxation services.
             </p>
 
         </div>
 
 
+
         <div class="service-grid">
 
+
+            <!-- 1 -->
 
             <div class="service-card">
 
@@ -993,15 +1851,19 @@ footer p {
                     🌿
                 </div>
 
-                <h3>Relaxation Massage</h3>
+                <h3>
+                    Massage
+                </h3>
 
                 <p>
-                    A calming massage experience designed
-                    to help you unwind.
+                    A relaxing massage experience
+                    designed around comfort and wellbeing.
                 </p>
 
             </div>
 
+
+            <!-- 2 -->
 
             <div class="service-card">
 
@@ -1009,15 +1871,19 @@ footer p {
                     🌸
                 </div>
 
-                <h3>Head Massage</h3>
+                <h3>
+                    Head Massage
+                </h3>
 
                 <p>
-                    A gentle head-focused massage for
-                    a peaceful and relaxing experience.
+                    A soothing head massage for
+                    a calm and peaceful experience.
                 </p>
 
             </div>
 
+
+            <!-- 3 -->
 
             <div class="service-card">
 
@@ -1025,15 +1891,19 @@ footer p {
                     🌿
                 </div>
 
-                <h3>Back Massage</h3>
+                <h3>
+                    Back Oil Massage
+                </h3>
 
                 <p>
-                    A soothing back massage focused on
-                    comfort and relaxation.
+                    A gentle back massage using
+                    suitable massage oil.
                 </p>
 
             </div>
 
+
+            <!-- 4 -->
 
             <div class="service-card">
 
@@ -1041,31 +1911,19 @@ footer p {
                     ✨
                 </div>
 
-                <h3>Shoulder Massage</h3>
+                <h3>
+                    Leg Massage
+                </h3>
 
                 <p>
-                    A relaxing shoulder treatment designed
-                    to ease everyday tension.
+                    A relaxing leg massage designed
+                    for comfort and relaxation.
                 </p>
 
             </div>
 
 
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🪷
-                </div>
-
-                <h3>Leg Massage</h3>
-
-                <p>
-                    A gentle lower-leg massage for a
-                    refreshed and comfortable feeling.
-                </p>
-
-            </div>
-
+            <!-- 5 -->
 
             <div class="service-card">
 
@@ -1073,47 +1931,39 @@ footer p {
                     🌱
                 </div>
 
-                <h3>Foot Massage</h3>
+                <h3>
+                    Shoulder Massage
+                </h3>
 
                 <p>
-                    A soothing foot massage that completes
-                    a peaceful wellness experience.
+                    A calming shoulder massage
+                    focused on relaxation.
                 </p>
 
             </div>
 
+
+            <!-- 6 -->
 
             <div class="service-card">
 
                 <div class="service-icon">
-                    💆
+                    🪷
                 </div>
 
-                <h3>Oil Massage</h3>
+                <h3>
+                    Foot Oil Massage
+                </h3>
 
                 <p>
-                    A relaxing massage experience using
-                    suitable massage oils.
+                    A soothing foot massage using
+                    suitable massage oil.
                 </p>
 
             </div>
 
 
-            <div class="service-card">
-
-                <div class="service-icon">
-                    ✨
-                </div>
-
-                <h3>Wellness Session</h3>
-
-                <p>
-                    A personalized session focused on
-                    relaxation and comfort.
-                </p>
-
-            </div>
-
+            <!-- 7 -->
 
             <div class="service-card">
 
@@ -1121,11 +1971,53 @@ footer p {
                     🌼
                 </div>
 
-                <h3>Head Massage Machine</h3>
+                <h3>
+                    Oil Massage
+                </h3>
 
                 <p>
-                    A gentle machine-assisted head massage
-                    experience.
+                    A relaxing massage experience
+                    using suitable massage oils.
+                </p>
+
+            </div>
+
+
+            <!-- 8 -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💆
+                </div>
+
+                <h3>
+                    Wellness Session
+                </h3>
+
+                <p>
+                    A personalized relaxation
+                    session designed for comfort.
+                </p>
+
+            </div>
+
+
+            <!-- 9 -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Head Massage Machine
+                </h3>
+
+                <p>
+                    A gentle machine-assisted
+                    head massage experience.
                 </p>
 
             </div>
@@ -1136,57 +2028,80 @@ footer p {
     </div>
 
 </section>
+
 
 
 <!-- =======================================================
      ABOUT
 ======================================================= -->
 
-<section class="introduction" id="about">
+<section
+    class="about"
+    id="about"
+>
+
 
     <div class="container">
 
-        <div class="intro-grid">
 
-            <div class="intro-image">
+        <div class="about-grid">
+
+
+            <div class="about-image">
 
                 <img
-                    src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=85"
+                    src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=85"
                     alt="Relaxing massage environment"
                 >
 
             </div>
 
 
-            <div class="intro-text">
 
-                <small>About The Real Massage</small>
+            <div class="about-text">
+
+
+                <small>
+                    About The Real Massage
+                </small>
+
 
                 <h2>
                     A peaceful pause
                     from everyday life.
                 </h2>
 
-                <p>
-                    At The Real Massage, our goal is to create
-                    a calm and welcoming environment where
-                    guests can slow down and enjoy a moment
-                    of relaxation.
-                </p>
 
                 <p>
-                    From focused head and shoulder treatments
-                    to relaxing back, leg and foot massages,
-                    our services are designed around comfort
-                    and wellbeing.
+
+                    At The Real Massage, we believe
+                    relaxation should feel natural,
+                    peaceful and comfortable.
+
                 </p>
+
+
+                <p>
+
+                    Our environment is designed to
+                    provide a calm atmosphere where
+                    you can take a break from the
+                    everyday routine.
+
+                </p>
+
 
                 <div class="quote">
-                    "Take a moment. Breathe deeply.
+
+                    "Take a moment.
+                    Breathe deeply.
                     Let yourself relax."
+
                 </div>
 
+
             </div>
+
 
         </div>
 
@@ -1195,24 +2110,33 @@ footer p {
 </section>
 
 
+
 <!-- =======================================================
-     FEATURES
+     WHY CHOOSE US
 ======================================================= -->
 
 <section class="features">
 
+
     <div class="container">
+
 
         <div class="section-heading">
 
-            <small>Why Choose Us</small>
+            <small>
+                Why Choose Us
+            </small>
 
-            <h2>The Real Difference</h2>
+            <h2>
+                The Real Difference
+            </h2>
 
         </div>
 
 
+
         <div class="feature-grid">
+
 
             <div class="feature">
 
@@ -1220,11 +2144,13 @@ footer p {
                     01
                 </div>
 
-                <h3>Peaceful Atmosphere</h3>
+                <h3>
+                    Peaceful Atmosphere
+                </h3>
 
                 <p>
-                    A thoughtfully designed environment
-                    for a calm experience.
+                    A calm and welcoming environment
+                    created for relaxation.
                 </p>
 
             </div>
@@ -1236,11 +2162,13 @@ footer p {
                     02
                 </div>
 
-                <h3>Focused Services</h3>
+                <h3>
+                    Variety of Services
+                </h3>
 
                 <p>
-                    A range of massage options for different
-                    relaxation preferences.
+                    Choose from a range of focused
+                    massage experiences.
                 </p>
 
             </div>
@@ -1252,15 +2180,18 @@ footer p {
                     03
                 </div>
 
-                <h3>Professional Experience</h3>
+                <h3>
+                    Comfortable Experience
+                </h3>
 
                 <p>
-                    A simple and welcoming approach to
-                    wellness and relaxation.
+                    A simple, welcoming approach
+                    to relaxation and wellbeing.
                 </p>
 
             </div>
 
+
         </div>
 
     </div>
@@ -1268,96 +2199,179 @@ footer p {
 </section>
 
 
+
 <!-- =======================================================
-     HOURS
+     OPENING HOURS
 ======================================================= -->
 
-<section class="hours" id="hours">
+<section
+    class="hours"
+    id="hours"
+>
+
 
     <div class="container">
 
+
         <div class="section-heading">
 
-            <small>Visit Us</small>
+            <small>
+                Visit Us
+            </small>
 
-            <h2>Opening Hours</h2>
+            <h2>
+                Opening Hours
+            </h2>
 
         </div>
+
 
 
         <div class="hours-box">
 
-            <div class="hours-row">
-                <strong>Monday</strong>
-                <span class="open">Open</span>
-            </div>
 
             <div class="hours-row">
-                <strong>Tuesday</strong>
-                <span class="open">Open</span>
+
+                <strong>
+                    Monday
+                </strong>
+
+                <span class="open">
+                    Open
+                </span>
+
             </div>
 
-            <div class="hours-row">
-                <strong>Wednesday</strong>
-                <span class="open">Open</span>
-            </div>
 
             <div class="hours-row">
-                <strong>Thursday</strong>
-                <span class="open">Open</span>
+
+                <strong>
+                    Tuesday
+                </strong>
+
+                <span class="open">
+                    Open
+                </span>
+
             </div>
 
-            <div class="hours-row">
-                <strong>Friday</strong>
-                <span class="open">Open</span>
-            </div>
 
             <div class="hours-row">
-                <strong>Saturday</strong>
-                <span class="closed">Closed</span>
+
+                <strong>
+                    Wednesday
+                </strong>
+
+                <span class="open">
+                    Open
+                </span>
+
             </div>
 
+
             <div class="hours-row">
-                <strong>Sunday</strong>
-                <span class="closed">Closed</span>
+
+                <strong>
+                    Thursday
+                </strong>
+
+                <span class="open">
+                    Open
+                </span>
+
             </div>
+
+
+            <div class="hours-row">
+
+                <strong>
+                    Friday
+                </strong>
+
+                <span class="open">
+                    Open
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <strong>
+                    Saturday
+                </strong>
+
+                <span class="closed">
+                    Closed
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <strong>
+                    Sunday
+                </strong>
+
+                <span class="closed">
+                    Closed
+                </span>
+
+            </div>
+
 
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- =======================================================
      CONTACT
 ======================================================= -->
 
-<section class="contact" id="contact">
+<section
+    class="contact"
+    id="contact"
+>
+
 
     <div class="container">
 
+
         <div class="contact-grid">
 
+
             <div class="contact-info">
+
 
                 <h2>
                     Your time
                     to unwind.
                 </h2>
 
+
                 <p>
-                    Ready to take a peaceful moment for yourself?
+
+                    Ready to take a peaceful moment
+                    for yourself?
+
                     Contact The Real Massage today.
+
                 </p>
 
 
                 <div class="contact-item">
 
-                    <strong>Website</strong>
+                    <strong>
+                        Shop Name
+                    </strong>
 
                     <span>
-                        www.therealmassage.com
+                        The Real Massage
                     </span>
 
                 </div>
@@ -1365,10 +2379,13 @@ footer p {
 
                 <div class="contact-item">
 
-                    <strong>Opening Days</strong>
+                    <strong>
+                        Services
+                    </strong>
 
                     <span>
-                        Monday – Friday
+                        Massage • Head • Back •
+                        Shoulder • Leg • Foot
                     </span>
 
                 </div>
@@ -1376,22 +2393,26 @@ footer p {
 
                 <div class="contact-item">
 
-                    <strong>Services</strong>
+                    <strong>
+                        Experience
+                    </strong>
 
                     <span>
-                        Head • Back • Shoulder • Leg • Foot
-                        • Wellness
+                        Relaxation • Wellness • Balance
                     </span>
 
                 </div>
+
 
             </div>
+
 
 
             <form
                 class="contact-form"
                 onsubmit="submitForm(event)"
             >
+
 
                 <div class="form-group">
 
@@ -1407,8 +2428,8 @@ footer p {
                 <div class="form-group">
 
                     <input
-                        type="email"
-                        placeholder="Email Address"
+                        type="tel"
+                        placeholder="Phone Number"
                         required
                     >
 
@@ -1418,8 +2439,8 @@ footer p {
                 <div class="form-group">
 
                     <input
-                        type="tel"
-                        placeholder="Phone Number"
+                        type="email"
+                        placeholder="Email Address"
                     >
 
                 </div>
@@ -1442,7 +2463,9 @@ footer p {
                     Send Enquiry
                 </button>
 
+
             </form>
+
 
         </div>
 
@@ -1451,45 +2474,114 @@ footer p {
 </section>
 
 
+
 <!-- =======================================================
      FOOTER
 ======================================================= -->
 
 <footer>
 
+
     <div class="footer-logo">
-        The Real <span>Massage</span>
+
+        The Real
+        <span>Massage</span>
+
     </div>
+
 
     <p>
         Relaxation • Wellness • Balance
     </p>
 
+
     <div class="footer-links">
 
-        <a href="#home">Home</a>
+        <a href="#home">
+            Home
+        </a>
 
-        <a href="#services">Services</a>
+        <a href="#services">
+            Services
+        </a>
 
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-        <a href="#hours">Hours</a>
+        <a href="#hours">
+            Hours
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">
+            Contact
+        </a>
 
     </div>
+
 
     <div class="copyright">
-        © 2026 The Real Massage. All rights reserved.
+
+        © 2026 The Real Massage.
+        All rights reserved.
+
     </div>
 
+
 </footer>
+
 
 
 <script>
 
 /* =========================================================
-   FORM
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu() {
+
+    const menu =
+        document.querySelector(".nav-links");
+
+    if (
+        menu.style.display === "flex"
+    ) {
+
+        menu.style.display = "none";
+
+    } else {
+
+        menu.style.display = "flex";
+
+        menu.style.position = "absolute";
+
+        menu.style.top = "70px";
+
+        menu.style.left = "0";
+
+        menu.style.width = "100%";
+
+        menu.style.flexDirection = "column";
+
+        menu.style.alignItems = "center";
+
+        menu.style.gap = "20px";
+
+        menu.style.padding = "25px";
+
+        menu.style.background =
+            "#faf8f2";
+
+        menu.style.boxShadow =
+            "0 15px 30px rgba(0,0,0,.08)";
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTACT FORM
 ========================================================= */
 
 function submitForm(event) {
@@ -1504,40 +2596,62 @@ function submitForm(event) {
 
 
 /* =========================================================
-   MOBILE MENU
+   CLOSE MOBILE MENU WHEN LINK IS CLICKED
 ========================================================= */
 
-function toggleMenu() {
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link) {
 
-    const menu = document.querySelector(".nav-links");
+        link.addEventListener(
+            "click",
+            function() {
 
-    if (menu.style.display === "flex") {
+                if (
+                    window.innerWidth <= 900
+                ) {
 
-        menu.style.display = "none";
+                    document
+                        .querySelector(
+                            ".nav-links"
+                        )
+                        .style.display = "none";
 
-    } else {
+                }
 
-        menu.style.display = "flex";
+            }
+        );
 
-        menu.style.position = "absolute";
-        menu.style.top = "78px";
-        menu.style.left = "0";
-        menu.style.width = "100%";
+    });
 
-        menu.style.flexDirection = "column";
 
-        menu.style.background = "#faf8f2";
+/* =========================================================
+   RESET MENU WHEN WINDOW GETS BIGGER
+========================================================= */
 
-        menu.style.padding = "25px";
+window.addEventListener(
+    "resize",
+    function() {
 
-        menu.style.textAlign = "center";
+        if (
+            window.innerWidth > 900
+        ) {
 
-        menu.style.gap = "20px";
+            document
+                .querySelector(
+                    ".nav-links"
+                )
+                .removeAttribute("style");
+
+        }
+
     }
-
-}
+);
 
 </script>
 
+
 </body>
 </html>
+
+
